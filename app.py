@@ -16,6 +16,9 @@ datasets = {
                         'size': (224, 224), 'classes': ['cataract', 'diabetic_retinopathy', 'glaucoma', 'normal']},
     'Malaria Cells': {'image': "images/malaria.png", 'model': 'Models h5/malaria.h5',
                       'size': (120, 120), 'classes': ['Parasitized', 'Uninfected']},
+    'Lung Cancer CT': {'image': "images/lung CT.jpg", 'model': 'Models h5/lung-cancer.h5',
+                       'size': (312, 312), 'classes': ['Bengin cases', 'Malignant cases', 'Normal cases']},
+
 }
 
 st.set_page_config(
@@ -72,8 +75,8 @@ submit = False
 
 def classifiy_img(image):
     image = Image.open(image)
-    # Create the array of the right shape to feed into the keras model
-    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    if len(np.array(image).shape) == 2:
+        image = image.convert('RGB')
     # image sizing
     size = datasets[disease]['size']
     image = ImageOps.fit(image, size, Image.ANTIALIAS)
