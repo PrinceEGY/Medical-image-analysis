@@ -66,7 +66,7 @@ with cols[1]:
     *Keep in mind that this results is not equivalent to a medical diagnosis!
     Doctors or patients CANNOT fully rely on it, but it can be used as an aid to onfirm the diagnosis, so if you have any problems, consult a human doctor.*
 
-    To analyze your medical imagery, simply follow the steps bellow:
+    To analyze your medical imaging, simply follow the steps bellow:
     1. Choose your type of image
     2. A sample of valid image of that type will show to you, your image should be of the same kind
     3. Upload your image
@@ -108,7 +108,7 @@ with cols[3]:
         word-spacing: 2px;
     }
     </style>""", unsafe_allow_html=True)
-    submit = st.button('Check imagery condition')
+    submit = st.button('Check imaging condition')
     st.text('5.Results')
 
     model = load_model(datasets[disease]['model'])
