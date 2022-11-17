@@ -12,12 +12,14 @@ def load_model(path):
 
 
 datasets = {
-    'Retina diabetes': {'image': "images/retina.jpeg", 'model': 'Models h5/diabetic-eye.h5',
+    'Retina diabetes': {'image': "images/retina.jpeg", 'model': r'Models h5/diabetic-eye.h5',
                         'size': (224, 224), 'classes': ['cataract', 'diabetic_retinopathy', 'glaucoma', 'normal']},
-    'Malaria Cells': {'image': "images/malaria.png", 'model': 'Models h5/malaria.h5',
+    'Malaria Cells': {'image': "images/malaria.png", 'model': r'Models h5/malaria.h5',
                       'size': (120, 120), 'classes': ['Parasitized', 'Uninfected']},
-    'Lung Cancer CT': {'image': "images/lung CT.jpg", 'model': 'Models h5/lung-cancer.h5',
+    'Lung Cancer CT': {'image': "images/lung CT.jpg", 'model': r'Models h5/lung-cancer.h5',
                        'size': (312, 312), 'classes': ['Bengin cases', 'Malignant cases', 'Normal cases']},
+    'Brain Tumor MRI': {'image': "images/brain_mri.jpg", 'model': r'Models h5/brain_tumor.h5',
+                        'size': (224, 224), 'classes': ['glioma', 'meningioma', 'No tumor', 'pituitary']},
 
 }
 
