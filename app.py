@@ -47,6 +47,7 @@ st.markdown("""
 
 cols = st.columns([1, 3, 1, 4])
 with cols[0]:
+    st.text('.\n\n\n\n\n\n\n\n.')
     st.image("images/doctor.png")
 
 with cols[1]:
